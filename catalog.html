@@ -20,33 +20,66 @@
         </header>
         <main>
             <section>
-                <h1>Предложения Гостиницы</h1>
+                <h1 class="visually-hidden">Предложения Гостиницы</h1>
                 <div>
-                    <h2>Параметры выбора</h2>
-                    <div>
-                        <div>
-                            <h3>Инфраструктура:</h3>
+                    <h2 class="visuallay-hidden">Параметры выбора</h2>
+                    <form action="https://echo.htmlacademy.ru" method="GET" oninput="priceoutput-from.value=price-from.value)">
+                        <fieldset>
+                            <legend>Инфраструктура:</legend>
                             <ul>
-                                <li>Бассейн</li>
-                                <li>Парковка</li>
-                                <li>Wi-Fi</li>
+                                <li>
+                                    <input type="checkbox" name="pool" id="filter-pool" checked>
+                                    <label for="filter-pool">Бассейн</label>
+                                </li>
+
+                                <li>
+                                    <input type="checkbox" name="parking" id="filter-parking">
+                                    <label for="filter-parking">Парковка</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="Wi-Fi" id="filter-Wi-Fi">
+                                    <label for="filter-Wi-Fi">Wi-Fi</label>
+                                </li>
                             </ul>
-                        </div>
-                        <div>
-                            <h3>Тип жилья:</h3>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Тип жилья:</legend>
                             <ul>
-                                <li>Гостиница</li>
-                                <li>Мотель</li>
-                                <li>Апартаменты</li>
+                                <li>
+                                    <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                                    <label for="filter-hotel">Гостиница</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="motel" id="filter-motel" checked>
+                                    <label for="filter-motel">Мотель</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="apartment" id="filter-apartment" checked>
+                                    <label for="filter-apartment">Апартаменты</label>
+                                </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <p>Стоимость в сутки (Р):</p>
-                    <!--Фильтр "Стоимость в Сутки"-->
-                    <button type="button">Показать</button>
-                    <!--Кнопка «Показать» отвечает за отправку формы на адрес https://echo.htmlacademy.ru/-->
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Стоимость в сутки (Р):</legend>
+                            <!--Фильтр "Стоимость в Сутки"-->
+                            <div>
+                            <label for="price-range-from">ОТ</label>
+                            <input type="range" id="price-from" name="price-from" min="0" max="9000" step="500" value="0">
+                            <output name="priceoutput-from"></output>
+                            </div>
+                            <div>
+                            <label for="price-range-to">ДО</label>
+                            <input type="range" id="price-to" name="price-to" min="1000" max="10000" step="500" value="3000">
+                            <output name="priceoutput-to"></output>
+                            </div>
+
+                        </fieldset>
+                        
+                        <button type="submit" name="filter-button" target="https://echo.htmlacademy.ru/">Показать</button>
+                    </form>
+                    <button type="submit" target="https://echo.htmlacademy.ru/">Показать</button>
+
                 </div>
             </section>
 
@@ -58,8 +91,8 @@
                         <li><a href="">По цене</a></li>
                         <li><a href="">По типу</a></li>
                         <li><a href="">По рейтингу</a></li>
-                        <li>Иконка вверх</li>
-                        <li>Иконка вниз</li>
+                        <li><a href="">Иконка вверх</a> </li>
+                        <li><a href="">Иконка вниз</a></li>
                     </ul>
                 </div>
 
@@ -134,7 +167,7 @@
                 </p>
             </section>
             <section>
-                <h2>Давайте дружить!</h2>
+                <h2 class="visually-hidden">Давайте дружить!</h2>
                 <ul>
                     <li><a href="#">Твиттер</a></li>
                     <li><a href="#">Фейсбук</a></li>
