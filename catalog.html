@@ -23,7 +23,7 @@
                 <h1 class="visually-hidden">Предложения Гостиницы</h1>
                 <div>
                     <h2 class="visually-hidden">Параметры выбора</h2>
-                    <form action="https://echo.htmlacademy.ru" method="GET" oninput="priceoutput-from.value=price-from.value)">
+                    <form action="https://echo.htmlacademy.ru" method="GET">
                         <fieldset>
                             <legend>Инфраструктура:</legend>
                             <ul>
@@ -37,8 +37,8 @@
                                     <label for="filter-parking">Парковка</label>
                                 </li>
                                 <li>
-                                    <input type="checkbox" name="Wi-Fi" id="filter-Wi-Fi">
-                                    <label for="filter-Wi-Fi">Wi-Fi</label>
+                                    <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                                    <label for="filter-wi-fi">Wi-Fi</label>
                                 </li>
                             </ul>
                         </fieldset>
@@ -64,22 +64,20 @@
                             <legend>Стоимость в сутки (Р):</legend>
                             <!--Фильтр "Стоимость в Сутки"-->
                             <div>
-                            <label for="price-range-from">ОТ</label>
+                            <label for="price-from">ОТ</label>
                             <input type="range" id="price-from" name="price-from" min="0" max="9000" step="500" value="0">
                             <output name="priceoutput-from"></output>
                             </div>
                             <div>
-                            <label for="price-range-to">ДО</label>
+                            <label for="price-to">ДО</label>
                             <input type="range" id="price-to" name="price-to" min="1000" max="10000" step="500" value="3000">
                             <output name="priceoutput-to"></output>
                             </div>
 
                         </fieldset>
                         
-                        <button type="submit" name="filter-button" target="https://echo.htmlacademy.ru/">Показать</button>
+                        <button type="submit">Показать</button>
                     </form>
-                    <button type="submit" target="https://echo.htmlacademy.ru/">Показать</button>
-
                 </div>
             </section>
 
@@ -91,8 +89,8 @@
                         <li><a href="">По цене</a></li>
                         <li><a href="">По типу</a></li>
                         <li><a href="">По рейтингу</a></li>
-                        <li><a href="">Иконка вверх</a> </li>
-                        <li><a href="">Иконка вниз</a></li>
+                        <li><a href="">Сортировать по возрастанию</a> </li>
+                        <li><a href="">Сортировать по убыванию</a></li>
                     </ul>
                 </div>
 
