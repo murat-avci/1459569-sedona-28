@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
     <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/customize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     </head>
-    <body>
-        <header>
-            <nav>
-                <a>
+    <body class="page-body">
+        <header class="main-header">
+            <nav class="main-navigation">
+                <a class="main-header-logo">
                     <img src="img/logo-sedona.svg" width="138" height="70" alt="Logo Sedona">
                 </a>
-                <ul>
-                    <li><a href="">Информация</a></li>
-                    <li><a href="">Фото и видео</a></li>
-                    <li><a href="">Карта штата</a></li>
-                    <li><a href="catalog.html">Гостиницы</a></li>
-                </ul>
+                <div class="main-navigation-wrapper">
+                    <div class="container">
+                        <ul class="site-navigation">
+                            <li><a href="">Информация</a></li>
+                            <li><a href="">Фото и видео</a></li>
+                            <li><a href="">Карта штата</a></li>
+                            <li><a href="catalog.html">Гостиницы</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>         
         </header>
-        <main>
-            <img src="img/intro-welcome.svg" width="456" height="350" alt="INTRO WELCOME">
+        <main class="container">
+            <div class="intro">
+                <img src="img/intro-welcome.svg" width="456" height="350" alt="INTRO WELCOME">
+            </div>
            
             <h1>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h1>
             <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -71,64 +80,63 @@
                 </ol>
             </section>
             
-            <section>
+            <section class="hotel-search">
                 <h2>Заинтересовались?</h2>
-                <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-                <button type="button">Поиск гостиницы в Седоне</button>
-                <form action="https://echo.htmlacademy.ru" method="POST">
-                    <ul>
-                        <li>
+                <p class="hotel-search-info">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+                <button class="button" type="button">Поиск гостиницы в Седоне</button>
+                <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="POST">
+                    <ul class="hotel-search-list">
+                        <li class="hotel-search-item">
                             <label for="date-check-in" >Дата заезда:</label>
                             <input id="date-check-in" type="text" name="date-check-in" placeholder="24 АПРЕЛЯ 2017">
                             <button type="button">Открыть календарь</button>
                         </li>
-                        <li>
+                        <li class="hotel-search-item">
                             <label for="date-check-out" >Дата выезда:</label>
                             <input id="date-check-out" type="text" name="date-check-out" placeholder="4 ИЮЛЯ 2017">
                             <button type="button">Открыть календарь</button>
                         </li>
-                        <li>
+                        <li class="hotel-search-item">
                             <label for="adult-count">Взрослые:</label>
-                            <button type="button" onclick="">-</button>
+                            <button type="button" value="decraese">-</button>
                             <input id="adult-count" type="number" name="adult-count">
-                            <button type="button" onclick="">+</button>
+                            <button type="button" value="2">+</button>
 
                         </li>
-                        <li>
+                        <li class="hotel-search-item">
                             <label for="kid-count">Дети:</label>                            
-                            <button type="button" onclick="">-</button>
-                            <input id="kid-count" type="counter" name="kid-count">
-                            <button type="button" onclick="">+</button>
+                            <button type="button" value="decraese">-</button>
+                            <input id="kid-count" type="number" name="kid-count">
+                            <button type="button" value="0">+</button>
                         </li>
                     </ul>
-                    <button type="submit">Найти</button>
+                    <button type="submit" class="search-button">Найти</button>
                 </form>
-            </section>
-            <section>
                 <h2 class="visually-hidden">Как добратся</h2>
                 <a href="">
                     <img src="img/map.png" width="1199" height="594" alt="Sedona Map">
                 </a>
-            </section>          
+            </section>
+               
         </main>
-        <footer>
-            <section>
+        <footer class="main-footer">
+            <section class="footer-contacts">
                 <h2 class="visually-hidden">Контакты</h2>
                 <p>
                     #visitsedona<br>
                     <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
                 </p>
             </section>
-            <section>
+            <section class="footer-social">
                 <h2 class="visually-hidden">Давайте дружить!</h2>
                 <ul>
-                    <li><a href="#">Твиттер</a></li>
-                    <li><a href="#">Фейсбук</a></li>
-                    <li><a href="#">Ютуб</a></li>
+                    <li class="social-button"><a href="#">Твиттер</a></li>
+                    <li class="social-button"><a href="#">Фейсбук</a></li>
+                    <li class="social-button"><a href="#">Ютуб</a></li>
                 </ul>
             </section>
-            <p>
-                <a href="https://htmlacademy.ru/intensive/htmlcss">Website by <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Logo HTML Academy"></a>
+            <p class="footer-copyright">
+                Website by  <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Logo HTML Academy"></a>
             </p>
         </footer>
     </body>

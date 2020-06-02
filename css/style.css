@@ -1,0 +1,347 @@
+/* Variables*/
+
+:root {
+  --basic-gray1: #333333;
+  --basic-gray2: #4F4F4F;
+  --basic-gray3: #828282;
+  --basic-gray4: #BDBDBD;
+  --basic-gray5: #E0E0E0;
+  --basic-gray6: #F2F2F2;
+  --basic-gray7: #231F20;
+  --basic-red: #EB5757;
+  --basic-orange: #F2994A;
+  --basic-yellow: #F2C94C;
+  --basic-green1: #219653;
+  --basic-green2: #27AE60;
+  --basic-green3: #6FCF97;
+  --basic-blue1: #2F80ED;
+  --basic-blue2: #2D9CDB;
+  --basic-blue3: #56CCF2;
+  --basic-purple1: #9B51E0;
+  --basic-purple2: #BB6BD9;
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+
+  --special1: #766357;
+  --special2: #81B3D2;
+  --special3: #604E43;
+  --special4: #503E33;
+  --special5: #A9A9A9;
+  --special6: #669EC0;
+  --special7: #5496BD;
+  --special8: #BDBBBC;
+  --special9: #EBEBEB;
+  --special10: #666666;
+}
+
+/*Global*/
+
+body {
+  min-width: 1220;
+  margin:  0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-gray6);
+  background-image: url("../img/white-back.png") ;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Main Navigation*/
+
+.main-navigation {
+  font: inherit;
+  color: var(--basic-black);
+  background-color: transparent;  
+}
+
+.main-navigation-wrapper {
+  background-color: var(--basic-white);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation-current a:not[href] {
+  background-color: var(--basic-gray6);
+}
+
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-gray6);
+}
+
+.site-navigation a:focus {
+  color: var(--special2);
+  background-color: var(--basic-gray6);
+  outline: none;
+}
+
+.site-navigation a:active {
+  color: var(--basic-black);
+  background-color: var(-basic-gray6);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.intro{
+  background-color: var(--basic-gray5);
+}
+
+/* Features*/ 
+
+/*Button*/
+
+.button {
+  font: inherit;
+  text-align: center;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--special1);
+  border: none;
+}
+
+.button:hover {
+  background-color: var(--special1);
+}
+
+.button:focus {
+  background-color: var(--special3);
+  outline: none;
+}
+
+.button:active {
+  background-color: var(--special4);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+/*Search Form*/
+
+.hotel-search-form {
+  background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.hotel-search-list {
+  list-style: none;
+}
+
+.hotel-search-item {
+  font: inherit;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.hotel-search-form input[type="text"],
+.hotel-search-form input[type="number"] {
+  font: inherit;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-gray6);
+  border: 0;
+}
+
+.hotel-search-form input[type="text"]:hover,
+.hotel-search-form input[type="number"]:hover {
+  background-color: var(--special9);
+}
+
+.hotel-search-form input[type="text"]:focus {
+  background-color: var(--basic-white);
+  outline: none;
+  border: 2px solid #E5E5E5;
+}
+
+.hotel-search-form input[type="number"]:focus {
+  background-color: var(--special9);
+  outline: none;
+}
+
+.hotel-search-form button:hover {
+  color: var(--special5);
+}
+
+.hotel-search-form button:focus {
+  color: var(--basic-black);
+  outline-color: var(--special2);
+}
+
+.hotel-search-form button:active {
+  color: var(--special2);
+}
+
+.search-button {
+  font: inherit;
+  text-align: center;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--special2);
+  border: none;
+}
+
+.search-button:hover {
+  background-color: var(--special2);
+}
+
+.search-button:focus {
+  background-color: var(--special6);
+  outline: none;
+}
+
+.search-button:active {
+  background-color: var(--special7);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.catalog h3{
+  font-style: normal;
+  font-size: 21px;
+  color: var(--basic-black);
+}
+
+.booking-list {
+  list-style: none;
+}
+
+.more-details {
+  text-align: center;
+  background-color: var(--special2);
+  color: var(--basic-white);
+  width: 110px;
+  height: 27px;
+}
+
+.booking {
+  text-align: center;
+  background-color: var(--special1);
+  color: var(--basic-white);
+  width: 142px;
+  height: 27px;
+}
+
+.booking-details span{
+  font: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  font-weight: 21px;
+  color: var(--basic-gray1);
+}
+
+.star-classification{
+
+}
+
+.user-rating{
+  width: 110px;
+  height: 27px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--special10);
+  background-color: var(--basic-gray6);
+  border: none;
+}
+
+/*Main footer*/
+
+.main-footer {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.footer-contacts {
+  text-align: left;
+}
+
+.footer-contacts a {
+  color: var(--basic-black);
+  text-decoration: none;
+}
+  
+.footer-contacts a:hover {
+  text-decoration: none;
+  outline: none;
+  background-color: var(--basic-gray6);
+}
+
+.footer-contacts a:focus {
+  text-decoration: none;
+  outline-color: var(--special2);
+  background-color: var(--basic-gray6);
+}
+
+.footer-contacts a:active {
+  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: var(--special4);
+}
+
+.footer-social ul {
+  list-style: none;
+}
+  
+/*Social button*/
+  
+.social-button {
+  background-color: var(--special2);
+}
+  
+.social-button:hover {
+  background-color: var(--special2);
+}
+
+.social-button:focus {
+  background-color: var(--special6);
+  outline: none;
+}
+
+.social-button:active {
+  background-color: var(--special7);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.footer-copyright{
+  color: var(--basic-gray7);
+}
+
+.footer-copyright a:hover{
+  color: var(--special2);
+}
+
+.footer-copyright a:focus {
+  background-color: var(--special2);
+  outline-color: var(--specia2);
+}
+
+.footer-copyright a:visited {
+  color: var(--special8);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
