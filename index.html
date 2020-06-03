@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="css/customize.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     </head>
     <body class="page-body">
@@ -29,7 +29,6 @@
             <div class="intro">
                 <img src="img/intro-welcome.svg" width="456" height="350" alt="INTRO WELCOME">
             </div>
-           
             <h1>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h1>
             <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
             <section>
@@ -86,24 +85,24 @@
                 <button class="button" type="button">Поиск гостиницы в Седоне</button>
                 <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="POST">
                     <ul class="hotel-search-list">
-                        <li class="hotel-search-item">
+                        <li class="hotel-check-in">
                             <label for="date-check-in" >Дата заезда:</label>
                             <input id="date-check-in" type="text" name="date-check-in" placeholder="24 АПРЕЛЯ 2017">
                             <button type="button">Открыть календарь</button>
                         </li>
-                        <li class="hotel-search-item">
+                        <li class="hotel-check-out">
                             <label for="date-check-out" >Дата выезда:</label>
                             <input id="date-check-out" type="text" name="date-check-out" placeholder="4 ИЮЛЯ 2017">
                             <button type="button">Открыть календарь</button>
                         </li>
-                        <li class="hotel-search-item">
+                        <li class="number-of-adult">
                             <label for="adult-count">Взрослые:</label>
                             <button type="button" value="decraese">-</button>
                             <input id="adult-count" type="number" name="adult-count">
                             <button type="button" value="2">+</button>
 
                         </li>
-                        <li class="hotel-search-item">
+                        <li class="number-of-children">
                             <label for="kid-count">Дети:</label>                            
                             <button type="button" value="decraese">-</button>
                             <input id="kid-count" type="number" name="kid-count">
@@ -119,20 +118,20 @@
             </section>
                
         </main>
-        <footer class="main-footer">
+        <footer class="main-footer main-footer-index">
             <section class="footer-contacts">
                 <h2 class="visually-hidden">Контакты</h2>
                 <p>
-                    #visitsedona<br>
+                    <a href="">#visitsedona</a><br>
                     <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
                 </p>
             </section>
             <section class="footer-social">
                 <h2 class="visually-hidden">Давайте дружить!</h2>
                 <ul>
-                    <li class="social-button"><a href="#">Твиттер</a></li>
-                    <li class="social-button"><a href="#">Фейсбук</a></li>
-                    <li class="social-button"><a href="#">Ютуб</a></li>
+                    <li><a class="social-button" href="#">Твиттер</a></li>
+                    <li><a class="social-button" href="#">Фейсбук</a></li>
+                    <li><a class="social-button" href="#">Ютуб</a></li>
                 </ul>
             </section>
             <p class="footer-copyright">

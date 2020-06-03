@@ -37,7 +37,7 @@
 /*Global*/
 
 body {
-  min-width: 1220;
+  min-width: 1220px;
   margin:  0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -47,7 +47,6 @@ body {
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-gray6);
-  background-image: url("../img/white-back.png") ;
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -86,46 +85,80 @@ img {
 }
 
 .site-navigation a:hover {
-  color: var(--basic-black);
-  background-color: var(--basic-gray6);
+  color: var(--special2);
+  background-color: transparent;
 }
 
 .site-navigation a:focus {
   color: var(--special2);
-  background-color: var(--basic-gray6);
+  background-color: transparent;
   outline: none;
 }
 
 .site-navigation a:active {
   color: var(--basic-black);
-  background-color: var(-basic-gray6);
+  background-color: transparent;
   mix-blend-mode: normal;
   opacity: 0.3;
 }
 
 .intro{
-  background-color: var(--basic-gray5);
+  background-color: var(--basic-gray6);
 }
 
+.container h1 {
+  font: inherit;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.container p {
+  font: inherit;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--basic-gray1);
+}
 /* Features*/ 
+
+.hotel-search h2 {
+  font: inherit;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.hotel-search-info {
+  font: inherit;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  color: var(--basic-gray1);
+}
 
 /*Button*/
 
 .button {
   font: inherit;
   text-align: center;
+  font-style: normal;
+  font-size: 21px;
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: var(--special1);
+  width: 568px;
+  height: 86px;
   border: none;
 }
 
 .button:hover {
-  background-color: var(--special1);
+  background-color: var(--special3);
 }
 
 .button:focus {
   background-color: var(--special3);
+  color: var(--basic-gray6);
   outline: none;
 }
 
@@ -146,19 +179,30 @@ img {
   list-style: none;
 }
 
-.hotel-search-item {
+.hotel-check-in,
+.hotel-check-out,
+.number-of-adult,
+.number-of-children {
   font: inherit;
-  color: var(--basic-black);
-  text-transform: uppercase;
 }
 
 .hotel-search-form input[type="text"],
 .hotel-search-form input[type="number"] {
   font: inherit;
+  font-style: normal;
+  padding-left: 15px;
   color: var(--basic-black);
-  text-transform: uppercase;
   background-color: var(--basic-gray6);
-  border: 0;
+  width: 346px;
+  height: 38px;
+  border: none;
+}
+
+.hotel-search-form input[type="number"] {
+  text-align: center;
+  width:114px;
+  height: 38px;
+  color: var(--basic-black);
 }
 
 .hotel-search-form input[type="text"]:hover,
@@ -166,19 +210,15 @@ img {
   background-color: var(--special9);
 }
 
-.hotel-search-form input[type="text"]:focus {
+.hotel-search-form input[type="text"]:focus,
+.hotel-search-form input[type="number"]:focus {
   background-color: var(--basic-white);
   outline: none;
   border: 2px solid #E5E5E5;
 }
 
-.hotel-search-form input[type="number"]:focus {
-  background-color: var(--special9);
-  outline: none;
-}
-
 .hotel-search-form button:hover {
-  color: var(--special5);
+  color: var(--basic-black);
 }
 
 .hotel-search-form button:focus {
@@ -187,20 +227,25 @@ img {
 }
 
 .hotel-search-form button:active {
+  font-weight: bold;
   color: var(--special2);
 }
 
 .search-button {
   font: inherit;
+  font-style: normal;
+  font-size: 21px;
   text-align: center;
-  color: var(--basic-white);
   text-transform: uppercase;
+  color: var(--basic-white);
   background-color: var(--special2);
+  width: 458px;
+  height:58px;
   border: none;
 }
 
 .search-button:hover {
-  background-color: var(--special2);
+  background-color: var(--special6);
 }
 
 .search-button:focus {
@@ -214,10 +259,26 @@ img {
   opacity: 0.3;
 }
 
+
+body .catalog-page {
+  background-color: var(--basic-gray6)
+}
+
 .catalog h3{
+  font: inherit;
   font-style: normal;
   font-size: 21px;
   color: var(--basic-black);
+}
+
+.hotel-photo-gallery h3:hover {
+  color: var(--special2);
+}
+
+.hotel-photo-gallery h3:active {
+  color: var(--basic-black);
+  mix-blend-mode: normal;
+  opacity: 0.3;
 }
 
 .booking-list {
@@ -225,19 +286,36 @@ img {
 }
 
 .more-details {
+  font: inherit;
   text-align: center;
   background-color: var(--special2);
   color: var(--basic-white);
-  width: 110px;
-  height: 27px;
 }
 
 .booking {
   text-align: center;
   background-color: var(--special1);
   color: var(--basic-white);
-  width: 142px;
-  height: 27px;
+}
+
+.more-details:hover {
+  background-color: var(--special6);
+}
+
+.more-details:active {
+  background-color: var(--special7);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.booking:hover {
+  background-color: var(--special3);
+}
+
+.booking:active {
+  background-color: var(--special4);
+  mix-blend-mode: normal;
+  opacity: 0.3;
 }
 
 .booking-details span{
@@ -247,10 +325,6 @@ img {
   font-size: 14px;
   font-weight: 21px;
   color: var(--basic-gray1);
-}
-
-.star-classification{
-
 }
 
 .user-rating{
@@ -275,6 +349,10 @@ img {
   background-repeat: no-repeat;
 }
 
+.main-footer-index {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 .footer-contacts {
   text-align: left;
 }
@@ -285,21 +363,20 @@ img {
 }
   
 .footer-contacts a:hover {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: var(--basic-blue1);
   outline: none;
-  background-color: var(--basic-gray6);
 }
 
 .footer-contacts a:focus {
   text-decoration: none;
   outline-color: var(--special2);
-  background-color: var(--basic-gray6);
 }
 
 .footer-contacts a:active {
   text-decoration: none;
   text-decoration: underline;
-  text-decoration-color: var(--special4);
+  text-decoration-color: var(--basic-blue1);
 }
 
 .footer-social ul {
@@ -313,7 +390,7 @@ img {
 }
   
 .social-button:hover {
-  background-color: var(--special2);
+  background-color: var(--special6);
 }
 
 .social-button:focus {
@@ -340,7 +417,7 @@ img {
   outline-color: var(--specia2);
 }
 
-.footer-copyright a:visited {
+.footer-copyright a:active {
   color: var(--special8);
   mix-blend-mode: normal;
   opacity: 0.3;
