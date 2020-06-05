@@ -43,10 +43,10 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
+  text-align: center;
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-gray6);
-  
 }
 
 .page-container {
@@ -98,7 +98,7 @@ img {
 .site-navigation a:focus {
   color: var(--special2);
   background-color: transparent;
-  outline: none;
+  
 }
 
 .site-navigation a:active {
@@ -260,33 +260,33 @@ img {
   line-height: 18px;
 }
 
-.by-price a:active {
-  color: var(--special2);
-}
-
-.by-type a,
-.by-rating a {
-  font: inherit;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 400;
+.sorting .link {
   color: var(--basic-black);
-  mix-blend-mode: normal;
-  opacity: 0.3;
-  border-bottom: 1px dashed var(--special2);
+  border-bottom: 1px dotted var(--special2) ;
+  font-weight: 400;
 }
 
-.by-type a:hover,
-.by-rating a:hover {
+.sorting .link:hover {
   color: var(--special2);
-  border-bottom: 1px dashed var(--special2);
 }
 
-.by-type a:active,
-.by-rating a:active {
-  font: inherit;
+.sorting .link:active {
   color: var(--basic-black);
   border-bottom: none;
+}
+
+.sorting .active {
+  color: var(--special2);
+  text-decoration: none;
+}
+
+
+.sort-button-container .active {
+  fill: #81b3d2;
+}
+
+.button-container {
+  display: flex;
 }
 
 .hotel-search h2 {
@@ -435,7 +435,6 @@ input:focus {
   mix-blend-mode: normal;
   opacity: 0.3;
 }
-
 
 body .catalog-page {
   background-color: var(--basic-gray6)

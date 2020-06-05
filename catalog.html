@@ -15,10 +15,18 @@
                     <img src="img/logo-sedona.svg" width="138" height="70" alt="Logo Sedona">
                 </a>
                 <ul class="site-navigation">
-                    <li><a href="" class="active">Информация</a></li>
-                    <li><a href="" class="active">Фото и видео</a></li>
-                    <li><a href="" class="active">Карта штата</a></li>
-                    <li><a href="" class="active">Гостиницы</a></li>
+                    <li class="current active">
+                        <a href="">Информация</a>
+                    </li>
+                    <li>
+                        <a href="">Фото и видео</a>
+                    </li>
+                    <li>
+                        <a href="">Карта штата</a>
+                    </li>
+                    <li>
+                        <a href="">Гостиницы</a>
+                    </li>
                 </ul>
             </nav>         
         </header>
@@ -91,21 +99,19 @@
                     <h3>Сортировка:</h3>
                     <ul>
                         <li>
-                            <a href="" class="active">По цене</a>
+                            <a href="" class="link">По цене</a>
                         </li>
                         <li>
-                            <a href="" class="active">По типу</a>
+                            <a href="" class="link">По типу</a>
                         </li>
                         <li>
-                            <a href="" class="active">По рейтингу</a>
-                        </li>
-                        <li>
-                            <a href="">Сортировать по возрастанию</a>
-                        </li>
-                        <li>
-                            <a href="">Сортировать по убыванию</a>
+                            <a href="" class="link">По рейтингу</a>
                         </li>
                     </ul>
+                    <div class="sort-button-container">
+                            <a class="sort-button up-button " href="" aria-label="">Сортировать по возрастанию</a>
+                            <a class="sort-button down-button active" href="" aria-label="">Сортировать по убыванию</a>
+                    </div>
                 </div>
 
                 <article class="catalog">
@@ -125,8 +131,10 @@
                         <li><a class="more-details" href="">Подробнее</a></li>
                         <li><a class="booking" href="">Забронировать</a></li>
                     </ul>
-                    <p>4 звезды</p>
-                    <p class="user-rating">Рейтинг: 8,5</p>  
+                    <div class="rating">
+                        <p>4 звезды</p>
+                        <p class="user-rating">Рейтинг: 8,5</p>
+                    </div>  
                 </article>
                 <article class="catalog">
                     <figure>
@@ -145,9 +153,11 @@
                         <li><a class="more-details" href="">Подробнее</a></li>
                         <li><a class="booking" href="">Забронировать</a></li>
                     </ul>
-                    <p>3 звезды</p>
-                    <p class="user-rating">Рейтинг: 8,9</p>
-                </article>    
+                    <div class="rating">
+                        <p>3 звезды</p>
+                        <p class="user-rating">Рейтинг: 8,9</p>
+                    </div>
+                </article>
                 <article class="catalog">
                     <figure>
                         <a class="hotel-photo-gallery" href="">
@@ -165,8 +175,10 @@
                         <li><a class="more-details" href="">Подробнее</a></li>
                         <li><a class="booking" href="">Забронировать</a></li>
                     </ul>
-                    <p>2 звезды</p>
-                    <p class="user-rating">Рейтинг: 9,2</p>
+                    <div class="rating">
+                        <p>2 звезды</p>
+                        <p class="user-rating">Рейтинг: 9,2</p>
+                    </div>
                 </article>
             </section>            
         </main>
@@ -174,7 +186,7 @@
             <section class="footer-contacts">
                 <h2 class="visually-hidden">Контакты</h2>
                 <p>
-                    <a href="">#visitsedona</a><br>
+                    <snap>#visitsedona</snap><br>
                     <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
                 </p>
             </section>
