@@ -41,6 +41,7 @@ body {
   margin:  0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
@@ -106,20 +107,171 @@ img {
   background-color: var(--basic-gray6);
 }
 
-.container h1 {
+.heading h1 {
   font: inherit;
-  font-style: normal;
   font-weight: bold;
   font-size: 21px;
 }
 
-.container p {
+.heading p {
   font: inherit;
-  font-style: normal;
   font-weight: normal;
   color: var(--basic-gray1);
 }
-/* Features*/ 
+/* Features*/
+
+.features li {
+  list-style: none;
+}
+
+.features p {
+  font: inherit;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.real-town h2,
+.attraction h2 {
+  font: inherit;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
+.real-town p,
+.attraction p {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--basic-white);
+}
+
+.real-town,
+.attraction {
+  background-color: var(--special2);
+  background-size: 400px 256px;
+}
+
+.benefits h3 {
+  font: inherit;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.benefits p {
+  font-weight: 400;
+  color: var(--basic-gray1);
+}
+
+.feature-item h2{
+  font:inherit;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.feature-item p{
+  font:inherit;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-gray1);
+}
+
+.filtration li {
+  list-style: none;
+}
+
+.filtration legend {
+  font: inherit;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--basic-white);
+}
+
+.filtration label,
+.filtration button {
+  font: inherit;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.filtration button {
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  width: 137px;
+  height: 36px;
+}
+
+.filtration button:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.sorting p {
+  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.sorting h3 {
+  font: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+}
+
+.sorting li{
+  list-style: none;
+}
+
+.sorting a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.by-price a:active {
+  color: var(--special2);
+}
+
+.by-type a,
+.by-rating a {
+  font: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  border-bottom: 1px dashed var(--special2);
+}
+
+.by-type a:hover,
+.by-rating a:hover {
+  color: var(--special2);
+  border-bottom: 1px dashed var(--special2);
+}
+
+.by-type a:active,
+.by-rating a:active {
+  font: inherit;
+  color: var(--basic-black);
+  border-bottom: none;
+}
 
 .hotel-search h2 {
   font: inherit;

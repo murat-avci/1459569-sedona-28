@@ -7,7 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     </head>
-    <body class="page-body catalog-page">
+    <body>
         <header class="main-header">
             <nav class="main-navigation container">
                 <a class="main-header-logo" href="index.html">
@@ -22,7 +22,7 @@
             </nav>         
         </header>
         <main class="page-catalog container">
-            <section>
+            <section class="filtration">
                 <h1 class="visually-hidden">Предложения Гостиницы</h1>
                 <div>
                     <h2 class="visually-hidden">Параметры выбора</h2>
@@ -85,15 +85,25 @@
             </section>
 
             <section>
-                <div>
+                <div class="sorting">
                     <p>Найдено:</p>
                     <h3>Сортировка:</h3>
                     <ul>
-                        <li><a href="">По цене</a></li>
-                        <li><a href="">По типу</a></li>
-                        <li><a href="">По рейтингу</a></li>
-                        <li><a href="">Сортировать по возрастанию</a> </li>
-                        <li><a href="">Сортировать по убыванию</a></li>
+                        <li class="by-price">
+                            <a href="">По цене</a>
+                        </li>
+                        <li class="by-type">
+                            <a href="">По типу</a>
+                        </li>
+                        <li class="by-rating">
+                            <a href="">По рейтингу</a>
+                        </li>
+                        <li>
+                            <a href="">Сортировать по возрастанию</a>
+                        </li>
+                        <li>
+                            <a href="">Сортировать по убыванию</a>
+                        </li>
                     </ul>
                 </div>
 
