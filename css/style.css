@@ -97,8 +97,7 @@ img {
 
 .site-navigation a:focus {
   color: var(--special2);
-  background-color: transparent;
-  
+  background-color: transparent;  
 }
 
 .site-navigation a:active {
@@ -112,14 +111,8 @@ a.current-active {
   color: var(--special1);
 }
 
-.logo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  z-index: 1;
-}
+/*Logo*/
+  
 
 .intro{
   background-color: var(--basic-gray6);
@@ -286,12 +279,10 @@ a.current-active {
 
 
 .sort-button-container .active {
-  fill: #81b3d2;
+  fill: var(--special2);
 }
 
-.button-container {
-  display: flex;
-}
+/*Button Container*/
 
 .hotel-search h2 {
   font: inherit;
@@ -546,8 +537,7 @@ body .catalog-page {
   
 .footer-contacts a:hover {
   color: var(--special2);
-  text-decoration: underline;
-  text-decoration-color: var(--basic-blue1);
+  text-decoration: none;
   outline: none;
 }
 
@@ -558,7 +548,6 @@ body .catalog-page {
 
 .footer-contacts a:active {
   text-decoration: none;
-  text-decoration: underline;
   text-decoration-color: var(--basic-blue1);
   color: var(--basic-black);
   mix-blend-mode: normal;
