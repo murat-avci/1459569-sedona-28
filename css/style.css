@@ -82,7 +82,7 @@ img {
   list-style: none;
 }
 
-.site-navigation-current a:not[href] {
+.site-navigation.current a:not[href] {
   background-color: var(--basic-gray6);
 }
 
@@ -106,6 +106,10 @@ img {
   background-color: transparent;
   mix-blend-mode: normal;
   opacity: 0.3;
+}
+
+a.current-active {
+  color: var(--special1);
 }
 
 .logo {
