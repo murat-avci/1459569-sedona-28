@@ -32,6 +32,7 @@
   --special8: #BDBBBC;
   --special9: #EBEBEB;
   --special10: #666666;
+  --special11: #e5e5e5;
 }
 
 /*Global*/
@@ -42,11 +43,19 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
-  font-weight: 700;
+  font-weight: bold;
   text-align: center;
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-gray6);
+  background-position: top center;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 .page-container {
@@ -66,19 +75,68 @@ img {
   height: auto;
 }
 
-/*Main Navigation*/
+/*Grid*/
+
+.page {
+  height: 100%;
+}
+
+/*Main Header*/
+
+.main-header {
+  margin-bottom: 77px;
+}
+
+.page-container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 15px 5px rgba(0,1,1,0.2);
+  background-color: var(--basic-white);
+ }
+
+ /*Main Navigation*/
 
 .main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font: inherit;
   color: var(--basic-black);
-  background-color: transparent;  
+  background-color: transparent;
+  margin-bottom: 77px;  
 }
 
 .main-navigation-wrapper {
+  width: 100%;
+  margin: 0;
   background-color: var(--basic-white);
 }
 
+.main-header-logo {
+  position: absolute;
+  width: 138px;
+  height: 70px;
+}
+
+/*Container*/
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*Site Navigation*/
+
 .site-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+  min-height: 56px;
   list-style: none;
 }
 
@@ -111,21 +169,36 @@ a.current-active {
   color: var(--special1);
 }
 
-/*Logo*/
-  
+/*Intro*/
 
 .intro{
   background-color: var(--basic-gray6);
 }
 
+.heading {
+  font: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 216px;
+}
+
 .heading h1 {
   font: inherit;
-  font-weight: bold;
+  max-width: 470px;
+  max-height: 80px;
   font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
 }
 
 .heading p {
   font: inherit;
+  max-width: 519px;
+  font-size: 14px;
+  max-height: 26px;
   font-weight: normal;
   color: var(--basic-gray1);
 }
@@ -153,7 +226,7 @@ a.current-active {
 .attraction p {
   font: inherit;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: normal;
   color: var(--basic-white);
 }
 
@@ -168,12 +241,12 @@ a.current-active {
   font-style: normal;
   font-size: 21px;
   line-height: 21px;
-  font-weight: 700;
+  font-weight: bold;
   color: var(--basic-black);
 }
 
 .benefits p {
-  font-weight: 400;
+  font-weight: normal;
   color: var(--basic-gray1);
 }
 
@@ -181,7 +254,7 @@ a.current-active {
   font:inherit;
   font-size: 21px;
   line-height: 21px;
-  font-weight: 700;
+  font-weight: bold;
   color: var(--basic-black);
 }
 
@@ -189,7 +262,7 @@ a.current-active {
   font:inherit;
   font-size: 14px;
   line-height: 21px;
-  font-weight: 400;
+  font-weight: normal;
   color: var(--basic-gray1);
 }
 
@@ -202,7 +275,7 @@ a.current-active {
   font-style: normal;
   font-size: 16px;
   line-height: 21px;
-  font-weight: 700;
+  font-weight: bold;
   color: var(--basic-white);
   background-color: var(--basic-gray6);
 }
@@ -213,7 +286,7 @@ a.current-active {
   font-style: normal;
   font-size: 14px;
   line-height: 21px;
-  font-weight: 400;
+  font-weight: normal;
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: var(--basic-gray6);
@@ -235,7 +308,7 @@ a.current-active {
   font: inherit;
   font-size: 21px;
   line-height: 26px;
-  font-weight: 700;
+  font-weight: bold;
   color: var(--basic-black);
 }
 
@@ -243,7 +316,7 @@ a.current-active {
   font: inherit;
   font-size: 12px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: normal;
   color: var(--basic-black);
 }
 
@@ -253,14 +326,14 @@ a.current-active {
 
 .sorting a {
   font-size: 12px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 18px;
 }
 
 .sorting .link {
   color: var(--basic-black);
   border-bottom: 1px dotted var(--special2) ;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .sorting .link:hover {
@@ -333,13 +406,41 @@ a.current-active {
 
 /*Search Form*/
 
+.estimated-check-dates {
+  width: 568px;
+  height: auto;
+  margin: 0 auto;
+}
+
 .hotel-search-form {
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
-.hotel-search-list {
+.number-of-visitors {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+  align-items: center;
   list-style: none;
+}
+
+.number-of-visitors li:first-child {
+  padding-left: 20px;
+}
+
+.hotel-search-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 55px 0 0;
+  list-style: none;
+}
+
+.hotel-search-list li  {
+  margin-bottom: 30px;
+  
 }
 
 .hotel-check-in,
@@ -377,7 +478,6 @@ input:focus {
 .hotel-search-form input[type="number"]:hover {
   background-color: var(--special9);
 }
-
 
 .hotel-search-form input[type="text"]:focus,
 .hotel-search-form input[type="number"]:focus {
@@ -431,11 +531,39 @@ input:focus {
   opacity: 0.3;
 }
 
+/*Catalog*/
+
+.kind-of-hotels {
+  margin-bottom: 5px;
+}
+
 body .catalog-page {
   background-color: var(--basic-gray6)
 }
 
-.catalog h3{
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--special11);
+  padding: 27px 73px 16px 72px;
+}
+
+.catalog:last-child {
+  border-bottom: 1px solid var(--special11);
+}
+
+.hotel-details {
+  display: flex;
+}
+
+.images {
+  padding-top: 3px;
+  padding-right: 30px;
+}
+
+a h3{
+  text-align: left;
+  margin: 0;
   font: inherit;
   font-style: normal;
   font-size: 21px;
@@ -452,21 +580,45 @@ body .catalog-page {
   opacity: 0.3;
 }
 
+.details-container {
+  display: flex;
+}
+
 .booking-list {
-  list-style: none;
+  display: flex;
+}
+
+.details-item {
+  padding-right: 6px;
+}
+
+.accommodation-type {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 17px;
+  font-weight: normal;
+}
+
+.start-price {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 17px;
 }
 
 .more-details {
-  font: inherit;
-  text-align: center;
-  background-color: var(--special2);
   color: var(--basic-white);
+  background-color: var(--special2);
+  padding: 4px 18px 5px 17px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .booking {
-  text-align: center;
-  background-color: var(--special1);
   color: var(--basic-white);
+  background-color: var(--special1);
+  padding: 4px 18px 5px 17px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .more-details:hover {
@@ -489,6 +641,12 @@ body .catalog-page {
   opacity: 0.3;
 }
 
+booking-details {
+  display: ;
+  flex-direction: column;
+  align-items: space-between;
+}
+
 .booking-details span{
   font: inherit;
   font-style: normal;
@@ -499,35 +657,37 @@ body .catalog-page {
 }
 
 .user-rating{
-  width: 110px;
-  height: 27px;
-  text-align: center;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
-  color: var(--special10);
+  padding: 3px 12px 3px 15px;
   background-color: var(--basic-gray6);
-  border: none;
+  color: var(--special10);
+}
+
+.rating p{
+  font-weight: normal;
 }
 
 /*Main footer*/
 
 .main-footer {
+  padding: 23px 0;
   color: var(--basic-black);
   background-color: var(--basic-white);
   background-position: 0 0;
   background-repeat: no-repeat;
 }
 
-.main-footer-index {
-  background-color: rgba(255, 255, 255, 0.9);
+.main-footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
+/*Footer Contacts*/
+
 .footer-contacts {
-  font-weight: 700;
+  font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  align-items: flex-end;
 }
 
 .footer-contacts a {
@@ -554,7 +714,16 @@ body .catalog-page {
   opacity: 0.3;
 }
 
+/*Footer Social*/
+
+.footer-social {
+  text-align: center;
+}
+
 .footer-social ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   list-style: none;
 }
   
@@ -579,9 +748,18 @@ body .catalog-page {
   opacity: 0.3;
 }
 
+/*Footer Copyright*/
+
 .footer-copyright{
   color: var(--basic-gray7);
 }
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+ }
 
 .footer-copyright a:hover{
   color: var(--special2);

@@ -15,7 +15,7 @@
                         <img src="img/logo-sedona.svg" width="138" height="70" alt="Logo Sedona">
                     </a>
                     <div class="main-navigation-wrapper">
-                        <div class="main-menu">
+                        <div class="container">
                             <ul class="site-navigation">
                                 <li><a href="">Информация</a></li>
                                 <li><a href="">Фото и видео</a></li>
@@ -91,65 +91,70 @@
                         <h2>Заинтересовались?</h2>
                         <p class="hotel-search-info">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
                         <button class="button" type="button">Поиск гостиницы в Седоне</button>
-                        <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="POST">
-                            <ul class="hotel-search-list">
-                                <li class="hotel-check-in">
-                                    <label for="date-check-in" >Дата заезда:</label>
-                                    <input id="date-check-in" type="text" name="date-check-in" placeholder="24 АПРЕЛЯ 2017">
-                                    <button type="button">Открыть календарь</button>
-                                </li>
-                                <li class="hotel-check-out">
-                                    <label for="date-check-out" >Дата выезда:</label>
-                                    <input id="date-check-out" type="text" name="date-check-out" placeholder="4 ИЮЛЯ 2017">
-                                    <button type="button">Открыть календарь</button>
-                                </li>
-                                <li class="number-of-adult">
-                                    <label for="adult-count">Взрослые:</label>
-                                    <button type="button" value="decraese">-</button>
-                                    <input id="adult-count" type="number" name="adult-count">
-                                    <button type="button" value="2">+</button>
-
-                                </li>
-                                <li class="number-of-children">
-                                    <label for="kid-count">Дети:</label>                            
-                                    <button type="button" value="decraese">-</button>
-                                    <input id="kid-count" type="number" name="kid-count">
-                                    <button type="button" value="0">+</button>
-                                </li>
-                            </ul>
-                            <button type="submit" class="search-button">Найти</button>
-                        </form>
+                        <div class="estimated-check-dates">
+                            <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="POST">
+                                    <ul class="hotel-search-list">
+                                        <li class="hotel-check-in">
+                                            <label for="date-check-in" >Дата заезда:</label>
+                                            <input id="date-check-in" type="text" name="date-check-in" placeholder="24 АПРЕЛЯ 2017">
+                                            <button type="button">Открыть календарь</button>
+                                        </li>
+                                        <li class="hotel-check-out">
+                                            <label for="date-check-out" >Дата выезда:</label>
+                                            <input id="date-check-out" type="text" name="date-check-out" placeholder="4 ИЮЛЯ 2017">
+                                            <button type="button">Открыть календарь</button>
+                                        </li>
+                                        <ul class="number-of-visitors">
+                                            <li class="number-of-adult">
+                                                <label for="adult-count">Взрослые:</label>
+                                                <button type="button" value="decraese">-</button>
+                                                <input id="adult-count" type="number" name="adult-count">
+                                                <button type="button" value="2">+</button>
+                                            </li>
+                                            <li class="number-of-children">
+                                                <label for="kid-count">Дети:</label>                            
+                                                <button type="button" value="decraese">-</button>
+                                                <input id="kid-count" type="number" name="kid-count">
+                                                <button type="button" value="0">+</button>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                <button type="submit" class="search-button">Найти</button>
+                            </form>
+                        </div> 
                         <h2 class="visually-hidden">Как добратся</h2>
                         <a href="">
                             <img src="img/map.png" width="1199" height="594" alt="Sedona Map">
                         </a>
                     </section>
                 </main>
-                <footer class="main-footer main-footer-index">
-                    <section class="footer-contacts">
-                        <h2 class="visually-hidden">Контакты</h2>
-                        <p>
-                            <span>#visitsedona</span><br>
-                            <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+                <footer class="page-footer main-footer">
+                    <div class="container">
+                        <section class="footer-contacts">
+                            <h2 class="visually-hidden">Контакты</h2>
+                            <p>
+                                <span>#visitsedona</span><br>
+                                <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+                            </p>
+                        </section>
+                        <section class="footer-social">
+                            <h2 class="visually-hidden">Давайте дружить!</h2>
+                            <ul class="social-link">
+                                <li>
+                                    <a class="social-button twitter" href="" aria-label="Твиттер">Твиттер</a>
+                                </li>
+                                <li>
+                                    <a class="social-button facebook" href="" aria-label="Фейсбук">Фейсбук</a>
+                                </li>
+                                <li>
+                                    <a class="social-button youtube" href="" aria-label="Ютуб">Ютуб</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <p class="footer-copyright">
+                            <span>Website by</span><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Logo HTML Academy"></a>
                         </p>
-                    </section>
-                    <section class="footer-social">
-                        <h2 class="visually-hidden">Давайте дружить!</h2>
-                        <ul class="social-link">
-                            <li>
-                                <a class="social-button twitter" href="" aria-label="Твиттер">Твиттер</a>
-                            </li>
-                            <li>
-                                <a class="social-button facebook" href="" aria-label="Фейсбук">Фейсбук</a>
-                            </li>
-                            <li>
-                                <a class="social-button youtube" href="" aria-label="Ютуб">Ютуб</a>
-                            </li>
-                        </ul>
-                    </section>
-                    <p class="footer-copyright">
-                        Website by  <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Logo HTML Academy"></a>
-                    </p>
+                    </div>
                 </footer>
         </div>
     </body>
