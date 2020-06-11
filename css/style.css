@@ -53,12 +53,12 @@ body {
 
 .page-body {
   min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
 }
 
 .page-container {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -75,6 +75,22 @@ img {
   height: auto;
 }
 
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*Grid*/
 
 .page {
@@ -87,15 +103,7 @@ img {
   margin-bottom: 77px;
 }
 
-.page-container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 15px 5px rgba(0,1,1,0.2);
-  background-color: var(--basic-white);
- }
-
- /*Main Navigation*/
+/*Main Navigation*/
 
 .main-navigation {
   display: flex;
@@ -117,14 +125,6 @@ img {
   position: absolute;
   width: 138px;
   height: 70px;
-}
-
-/*Container*/
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0;
 }
 
 /*Site Navigation*/
@@ -642,7 +642,7 @@ a h3{
 }
 
 booking-details {
-  display: ;
+  display: flex;
   flex-direction: column;
   align-items: space-between;
 }
@@ -676,7 +676,7 @@ booking-details {
   background-repeat: no-repeat;
 }
 
-.main-footer .container {
+.main-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
