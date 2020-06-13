@@ -14,20 +14,22 @@
                     <a class="main-header-logo" href="index.html">
                         <img src="img/logo-sedona.svg" width="138" height="70" alt="Logo Sedona">
                     </a>
-                    <ul class="site-navigation">
-                        <li>
-                            <a href="">Информация</a>
-                        </li>
-                        <li>
-                            <a href="">Фото и видео</a>
-                        </li>
-                        <li>
-                            <a href="">Карта штата</a>
-                        </li>
-                        <li>
-                            <a class="current-active" href="">Гостиницы</a>
-                        </li>
-                    </ul>
+                    <div class="main-navigation-wrapper">
+                        <ul class="site-navigation">
+                            <li>
+                                <a href="">Информация</a>
+                            </li>
+                            <li>
+                                <a href="">Фото и видео</a>
+                            </li>
+                            <li>
+                                <a href="">Карта штата</a>
+                            </li>
+                            <li>
+                                <a class="current-active" href="">Гостиницы</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>         
             </header>
             <main class="page-catalog">
@@ -36,14 +38,13 @@
                     <div>
                         <h2 class="visually-hidden">Параметры выбора</h2>
                         <form action="https://echo.htmlacademy.ru" method="GET">
-                            <fieldset>
+                            <fieldset class="infrastructure">
                                 <legend>Инфраструктура:</legend>
                                 <ul>
                                     <li>
                                         <input type="checkbox" name="pool" id="filter-pool" checked>
                                         <label for="filter-pool">Бассейн</label>
                                     </li>
-
                                     <li>
                                         <input type="checkbox" name="parking" id="filter-parking">
                                         <label for="filter-parking">Парковка</label>
@@ -54,7 +55,7 @@
                                     </li>
                                 </ul>
                             </fieldset>
-                            <fieldset>
+                            <fieldset class="hotel-type">
                                 <legend>Тип жилья:</legend>
                                 <ul>
                                     <li>
@@ -72,7 +73,7 @@
                                 </ul>
 
                             </fieldset>
-                            <fieldset>
+                            <fieldset class="price-range">
                                 <legend>Стоимость в сутки (Р):</legend>
                                 <!--Фильтр "Стоимость в Сутки"-->
                                 <div>
@@ -85,43 +86,36 @@
                                 <input type="range" id="price-to" name="price-to" min="1000" max="10000" step="500" value="3000">
                                 <output name="priceoutput-to"></output>
                                 </div>
-
                             </fieldset>
-                            
                             <button type="submit">Показать</button>
                         </form>
+                        
                     </div>
                 </section>
 
                 <section>
                     <div class="sorting">
-                        <p>Найдено:</p>
-                        <h3>Сортировка:</h3>
-                        <ul>
-                            <li>
+                            <p>Найдено:</p>
+                            <h3>Сортировка:</h3>
+                        <div class="sorting-by">
                                 <a href="" class="link">По цене</a>
-                            </li>
-                            <li>
                                 <a href="" class="link">По типу</a>
-                            </li>
-                            <li>
                                 <a href="" class="link">По рейтингу</a>
-                            </li>
-                        </ul>
+                        </div>
                         <div class="sort-button-container">
-                                <a class="sort-button up-button " href="" aria-label="">Сортировать по возрастанию</a>
-                                <a class="sort-button down-button active" href="" aria-label="">Сортировать по убыванию</a>
+                                <a class="up-button" href="" aria-label="">Сортировать по возрастанию</a>
+                                <a class="down-button active" href="" aria-label="">Сортировать по убыванию</a>
                         </div>
                     </div>
+                </section>
+                <section>
                     <div class="kind-of-hotels">
                         <article class="catalog">
                             <div class="hotel-details">
-                                <div class="images">
                                     <a class="hotel-photo-gallery" href="">
                                         <img src="img/amara-resort&spa.jpg" width="135" height="90" alt="Фотогалерея Amara Resort & Spa">
                                     </a>
-                                </div>
-                                <div>
+                                <div class="hotel-info">
                                     <a class="hotel-photo-gallery" href="#">
                                         <h3>Amara Resort & Spa</h3>
                                     </a>
@@ -144,12 +138,10 @@
                         </article>
                         <article class="catalog">
                             <div class="hotel-details">
-                                <div class="images">
                                     <a class="hotel-photo-gallery" href="">
                                         <img src="img/desert-quail-inn.jpg" width="135" height="90" alt="Фотогалерея Desert Quail Inn">
                                     </a>
-                                </div>
-                                <div>
+                                <div class="hotel-info">
                                     <a class="hotel-photo-gallery" href="#">
                                         <h3>Desert Quail Inn</h3>
                                     </a>
@@ -172,12 +164,10 @@
                         </article>
                         <article class="catalog">
                             <div class="hotel-details">
-                                <div class="images">
                                     <a class="hotel-photo-gallery" href="">
                                         <img src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="Фотогалерея Villas at Poco Diablo">
                                     </a>
-                                </div>
-                                <div>
+                                <div class="hotel-info">
                                     <a class="hotel-photo-gallery" href="#">
                                         <h3>Villas at Poco Diablo</h3>
                                     </a>
