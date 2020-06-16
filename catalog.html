@@ -72,21 +72,23 @@
                                     </li>
                                 </ul>
                             </fieldset>
-                            <fieldset class="catalog-filter-item">
-                                <legend>Стоимость в сутки (Р):</legend>
-                                <div class="price-controls">
-                                    <label class="price-min" for="price-min">от<input type="text" id="price-min" name="price-min" value="0"></label>
-                                    <label class="price-max" for="price-max">до<input type="text" id="price-max" name="price-max" value="3000"></label>
-                                </div>
-                                <div class="range-controls">
-                                    <div class="scale">
-                                        <div class="bar"></div>
+                            <div class="range-filter">
+                                <fieldset class="catalog-filter-item">
+                                    <legend>Стоимость в сутки (Р):</legend>
+                                    <div class="price-controls">
+                                        <label class="price-min" for="price-min">от<input type="text" id="price-min" name="price-min" value="0"></label>
+                                        <label class="price-max" for="price-max">до<input type="text" id="price-max" name="price-max" value="3000"></label>
                                     </div>
-                                    <div class="toggle toggle-min" tabindex="0"></div>
-                                    <div class="toggle toggle-max" tabindex="3000"></div>
-                                </div>    
-                            </fieldset>
-                            <button class="catalog-filter-button" type="submit">Показать</button>
+                                    <div class="range-controls">
+                                        <div class="scale">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="toggle toggle-min" tabindex="0"></div>
+                                        <div class="toggle toggle-max" tabindex="0"></div>
+                                    </div>    
+                                </fieldset>
+                                <button class="catalog-filter-button" type="submit">Показать</button>
+                            </div>
                         </form>                        
                     </div>
                 </section>
@@ -100,8 +102,8 @@
                                 <a href="" class="link">По рейтингу</a>
                         </div>
                         <div class="sort-button-container">
-                                <a class="sort-up" href="" aria-label=""><!--<span class="visually-hidden">-->Сортировать по возрастанию</span><!--<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>--></a>
-                                <a class="sort-down active" href="" aria-label=""><!--<span class="visually-hidden">-->Сортировать по убыванию</span><!--<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>--></a>
+                                <a class="sort-up" href="" aria-label=""><span class="visually-hidden">Сортировать по возрастанию</span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg></a>
+                                <a class="sort-down active" href="" aria-label=""><span class="visually-hidden">Сортировать по убыванию</span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg></a>
                         </div>
                     </div>
                 </section>
@@ -129,8 +131,8 @@
                                 </div>
                             </div>
                             <div class="rating">
-                                <p class="star-class"><span class="visually-hidden">4 звезды</span><i></i><i></i><i></i><i></i></p>
-                                <p class="user-rating">Рейтинг: 8,5</p>
+                                <div class="star-rate four-stars"><span class="visually-hidden">4 звезды</span></div>
+                                <p class="user-rating">Рейтинг:<span class="user-count">8,5</span></p>
                             </div>  
                         </article>
                         <article class="catalog">
@@ -155,8 +157,8 @@
                                 </div>
                             </div>
                             <div class="rating">
-                                <p class="star-class"><span class="visually-hidden">3 звезды</span><i></i><i></i><i></i></p>
-                                <p class="user-rating">Рейтинг: 8,9</p>
+                                <div class="star-rate three-stars"><span class="visually-hidden">3 звезды</span></div>
+                                <p class="user-rating">Рейтинг:<span class="user-count">8,9</span></p>
                             </div>
                         </article>
                         <article class="catalog">
@@ -181,8 +183,8 @@
                                 </div>
                             </div>
                             <div class="rating">
-                                <p  class="star-class"><span class="visually-hidden">2 звезды</span><i></i><i></i></p>
-                                <p class="user-rating">Рейтинг: 9,2</p>
+                                <div class="star-rate two-stars"><span class="visually-hidden">2 звезды</span></div>
+                                <p class="user-rating">Рейтинг:<span class="user-count">9,2</span></p>
                             </div>
                         </article>
                     </div>
