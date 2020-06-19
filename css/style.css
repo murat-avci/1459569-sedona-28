@@ -273,16 +273,12 @@ a.current-active {
 
 .info p:last-child {
   padding: 10px 0 54px;
+  
 }
-/*
-.feature-item p {
-  font:inherit;
-  font-size: 14px;
-  line-height: 21px;
+
+.info p {
   font-weight: normal;
-  margin-top: 25px;
-  padding: 0 0px;
-}*/
+}
 
 .opportunities {
   display: flex;
@@ -302,9 +298,9 @@ a.current-active {
   justify-content: start;
   align-items: flex-start;
   min-height: 330px;
-  padding-top: 0;
-  padding-left: 0;
+  padding: 0;
   margin: 0; 
+  
 }
 
 .benefits p {
@@ -316,6 +312,8 @@ a.current-active {
   width: 400px;
   height: auto;
   margin-top: 10px;
+  padding-top:  15px;
+  
 }
 
 .nested-list span {
@@ -333,21 +331,40 @@ a.current-active {
   content: "";
   display: block;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center top;
+  padding-top: px;
   height: 99px;
+  
 }
 
 .home::before {
   background-image: url("../img/icon-1.svg");
 }
+h3.home {
+  margin-left: -1px;
+  margin-top: 5px;
+  line-height: 28px;
+}
 
 .food::before {
   background-image: url("../img/icon-3.svg");
+  background-position: 162px 1px;
+}
+
+h3.food {
+  margin-top: 5px;
+  line-height: 28px;
 }
 
 .souvenir::before {
   background-image: url("../img/icon-2.svg");
-  background-position: 98px -5px;
+  
+}
+
+h3.souvenir {
+  line-height: 31px;
+  margin-left: 2px;
+  margin-top: 1px;
 }
 
 .attractions {
@@ -780,6 +797,8 @@ padding-right: 70px;
   color: var(--basic-black);
   border-bottom: 1px dotted var(--special2) ;
   font-weight: normal;
+
+  opacity: 0.3;
 }
 
 .sorting .link:hover {
@@ -789,6 +808,7 @@ padding-right: 70px;
 .sorting .link:active {
   color: var(--basic-black);
   border-bottom: none;
+  opacity: 1;
 }
 
 .sorting .active {
@@ -864,6 +884,7 @@ p.hotel-search-info {
 
 .estimated-check-dates {
   position: relative;
+  box-sizing: border-box;
 
   width: 568px;
   margin: 0 auto;
@@ -876,8 +897,8 @@ p.hotel-search-info {
   display: flex;
   flex-wrap: wrap;
   
-  padding: 55px;
-  padding-top: 40px;
+  padding-left: 55px;
+  padding-top: 42px;
 
   text-align: left; 
 
@@ -899,12 +920,12 @@ p.hotel-search-info {
 }
 
 .hotel-search-form p:nth-child(2) {
-  margin-top: 11px;
+  margin-top: 20px;
 }
 
 .hotel-search-form p:nth-child(3),
 .hotel-search-form p:last-child {
-  margin-top: 14px;
+  margin-top: 20px;
 }
 
 
@@ -923,9 +944,11 @@ p.hotel-search-info {
 }
 
 .hotel-search-form input {
-  width: 295px;
-  height: 24px;
-  padding: 6px 35px 12px 10px;
+  box-sizing: border-box;
+
+  width: 346px;
+  height: 38px;
+  padding: 11px 35px 12px 10px;
 
   font: inherit;
   
@@ -948,7 +971,7 @@ p.hotel-search-info {
 .form-button {
   position: absolute;
   top: 3px;
-  right: -2px;
+  right: 1px;
   
   width: 40px;
   height: 40px;
@@ -975,10 +998,17 @@ p.hotel-search-info {
 }
 
 .visitors input {
-  width: 35px;
-  padding: 5px 38px;
+  box-sizing: border-box;
+  width: 114px;
+  height: 38px;
+  padding: 6px 32px 6px 46px;
 
   text-align: center;
+}
+
+p.visitors {
+  margin-top: 19px;
+  margin-left: 1px;;
 }
 
 .visitors .form-button {
@@ -1005,10 +1035,13 @@ p.hotel-search-info {
 }
 
 .hotel-search-form .button-search {
-  width: 100%;
+  box-sizing: border-box;
+
+  width: 458px;
   height: 58px;
-  margin: 0;
-  margin-top: 45px;
+
+  margin-top: 44px;
+  margin-bottom: 55px; 
   padding: 16px;
 
   background-color: #81b3d2;
