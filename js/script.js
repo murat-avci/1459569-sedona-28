@@ -6,13 +6,31 @@ var checkOut = document.querySelector("[name=check-out]");
 var sumAdults = document.querySelector("[name=adults]");
 var sumChilds = document.querySelector("[name=childs]");
 
+var isStorageSupport = true;
+var storage = "";
+
+try {
+   storage = localStorage.getItem("adults");
+   storage = localStorage.getItem("childs");
+} catch (err) {
+   isStorageSupport = false;
+}
+
 modal.classList.add("modal-hide");
+
 togBtn.addEventListener("click", function() {
-  modal.classList.toggle("modal-hide");
-  modal.classList.remove("modal-error");
+  evt.preventDefault();
+  if (modal.classList.contains("modal-hide") || modal.classList.contains("modal-close")) {
+    modal.classList.remove("modal-hide");
+    modal.classList.remove("modal-close");
+  } else {
+    modal.classList.remove("modal-error");
+    modal.classList.add("modal-close");
+  }
+});
 });
 
-form.addEventListener("submit", function(evt) {
+modal.addEventListener("submit", function(evt) {
   if (!checkIn.value || !checkOut.value || !sumAdults.value || !sumChilds.value) {
     evt.preventDefault();
     modal.classList.remove("modal-error");
