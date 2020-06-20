@@ -99,7 +99,7 @@ input[type="radio"].visually-hidden {
 
 .main-header-logo {
   position: absolute;
-  z-index: 2; 
+  z-index: 1; 
   left: 50%;
   margin-left: -69px;
   width: 138px;
@@ -850,7 +850,7 @@ p.hotel-search-info {
 
 /*Button*/
 
-.button {
+.search-hotel-button {
   font: inherit;
   text-align: center;
   font-style: normal;
@@ -863,17 +863,17 @@ p.hotel-search-info {
   border: none;
 }
 
-.button:hover {
+.search-hotel-button:hover {
   background-color: var(--special3);
 }
 
-.button:focus {
+.search-hotel-button:focus {
   background-color: var(--special3);
   color: var(--basic-gray2);
   outline: none;
 }
 
-.button:active {
+.search-hotel-button:active {
   background-color: var(--special4);
   mix-blend-mode: normal;
   opacity: 0.3;
@@ -888,11 +888,12 @@ p.hotel-search-info {
 
   width: 568px;
   margin: 0 auto;
+  z-index: 3;
 }
 
 .hotel-search-form {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 
   display: flex;
   flex-wrap: wrap;
@@ -1292,6 +1293,7 @@ p.user-rating {
   
   text-align: center;
   align-items: center;
+  z-index: 3;
 }
 
 /*Footer Contacts*/
@@ -1452,3 +1454,55 @@ p.user-rating {
   font-weight: normal;
   margin-left: 13px;
 }
+
+.modal-hide {
+  display: none;
+}
+
+.modal-container {
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-delay: -0.9s;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(-2000px); }
+
+  70% { transform: translateY(30px); }
+
+  90% { transform: translateY(-10px); }
+
+  100% { transform: translateY(0); }
+}
+
+.modal-error {
+  animation: shake 0.9s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.sedona-map {
+  position: relative;
+}
+
+.sedona-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+/*
+.sedona-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}*/
