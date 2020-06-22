@@ -1,48 +1,41 @@
 var togBtn = document.querySelector(".search-hotel-button");
-var modal = document.querySelector(".modal-container");
+var modal = document.querySelector(".hotel-search");
 var form = modal.querySelector("form");
-var checkIn = document.querySelector("[name=check-in]");
-var checkOut = document.querySelector("[name=check-out]");
-var sumAdults = document.querySelector("[name=adults]");
-var sumChilds = document.querySelector("[name=childs]");
+var checkIn = modal.querySelector("[name=check-in]");
+var checkOut = modal.querySelector("[name=check-out]");
+var sumAdults = modal.querySelector("[name=adults]");
+var sumChilds = modal.querySelector("[name=childs]");
 
 var isStorageSupport = true;
 var storage = "";
 
 try {
-   storage = localStorage.getItem("adults");
-   storage = localStorage.getItem("childs");
+  storage = localStorage.getItem("sumChilds");
 } catch (err) {
-   isStorageSupport = false;
+  isStorageSupport = false;
 }
 
-modal.classList.add("modal-hide");
-
-togBtn.addEventListener("click", function() {
+form.addEventListener("submit", function(evt) {
   evt.preventDefault();
-  if (modal.classList.contains("modal-hide") || modal.classList.contains("modal-close")) {
-    modal.classList.remove("modal-hide");
-    modal.classList.remove("modal-close");
-  } else {
-    modal.classList.remove("modal-error");
-    modal.classList.add("modal-close");
-  }
-});
-});
-
-modal.addEventListener("submit", function(evt) {
-  if (!checkIn.value || !checkOut.value || !sumAdults.value || !sumChilds.value) {
-    evt.preventDefault();
+  if(!checkIn.value || !checkOut.value || !sumAdults.value || !sumChilds.value) {
     modal.classList.remove("modal-error");
     modal.offsetWidth = modal.offsetWidth;
     modal.classList.add("modal-error");
-  }
-  else {
-    if (isstorageSupport) {
-      localStorage.setItem("checkIn", checkIn.value);
-      localStorage.setItem("checkOut", checkOut.value);
+  } else {
+      if (isStorageSupport) {
       localStorage.setItem("sumAdults", sumAdults.value);
-      localStorage.setItem("sumChild", sumChild.value);
+      localStorage.setItem("sumChilds", sumChilds.value);
     }
   }
 });
+
+togBtn.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  modal.classList.add("modal-show");
+    if (storage) {
+      sumChilds.value = storage;
+      sumAdults.focus();
+    } else {
+      sumChilds.focus();
+    }
+  });

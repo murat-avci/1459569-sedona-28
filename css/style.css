@@ -1059,7 +1059,7 @@ p.visitors {
 input::-webkit-input-placeholder {
   color: var(--basic-black);
  } 
- input::-moz-placeholder {
+input::-moz-placeholder {
   color: var(--basic-black);
  }
 
@@ -1460,6 +1460,7 @@ p.user-rating {
 }
 
 .modal-container {
+  display: block;
   animation-name: bounce;
   animation-duration: 2s;
   animation-delay: -0.9s;
@@ -1499,8 +1500,8 @@ p.user-rating {
 
   margin: 0;
 }
-/*
-.sedona-map iframe {
+
+/*.sedona-map iframe {
   position: relative;
   z-index: 2;
 
