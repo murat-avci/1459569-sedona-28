@@ -1507,3 +1507,11 @@ p.user-rating {
 
   border: none;
 }
+
+.map-frame {
+  border:none;
+  overflow:hidden;
+  margin:0;
+  height:593px;
+  width:1200px;
+  }
