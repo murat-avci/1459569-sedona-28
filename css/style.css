@@ -1457,8 +1457,8 @@ p.user-rating {
 .modal-container {
   display: block;
   animation-name: bounce;
-  animation-duration: 2s;
-  animation-delay: -0.9s;
+  animation-duration: 0.6s;
+  /*animation-delay: -0.9s;*/
 }
 
 @keyframes bounce {
