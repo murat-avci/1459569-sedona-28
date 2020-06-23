@@ -173,7 +173,6 @@ input[type="radio"].visually-hidden {
 .site-navigation a:active {
   color: var(--basic-black);
   background-color: transparent;
-  mix-blend-mode: normal;
   opacity: 0.3;
 }
 
@@ -361,7 +360,6 @@ h3.food {
 
 .souvenir::before {
   background-image: url("../img/icon-2.svg");
-  
 }
 
 h3.souvenir {
@@ -422,7 +420,6 @@ h3.souvenir {
   padding: 0;
   color: var(--basic-gray1);
   text-align: center;
-  
 }
 
 .properties .feature-item {
@@ -876,7 +873,6 @@ p.hotel-search-info {
 
 .search-hotel-button:active {
   background-color: var(--special4);
-  mix-blend-mode: normal;
   opacity: 0.3;
 }
 
@@ -1004,7 +1000,7 @@ p.hotel-search-info {
   box-sizing: border-box;
   width: 114px;
   height: 38px;
-  padding: 6px 32px 6px 46px;
+  padding: 6px 44px 7px 43px;
 
   text-align: center;
 }
@@ -1127,7 +1123,6 @@ a.link.active {
 
 .hotel-photo-gallery h3:active {
   color: var(--basic-black);
-  mix-blend-mode: normal;
   opacity: 0.3;
 }
 
@@ -1345,7 +1340,6 @@ p.user-rating {
   text-decoration-color: var(--basic-blue);
   color: var(--basic-black);
 
-  mix-blend-mode: normal;
   opacity: 0.3;
 }
 
@@ -1403,7 +1397,6 @@ p.user-rating {
 
 .social-button:active {
   background-color: var(--special7);
-  mix-blend-mode: normal;
   opacity: 0.3;
 }
 
