@@ -288,7 +288,7 @@ a.current-active {
 .info,
 .attractions div {
   background-color: var(--special2);
-  color: var(--basic-black);
+  color: var(--basic-white);
   width: 534px;
   min-height: auto;
   padding: 0 42px 0 45px;
