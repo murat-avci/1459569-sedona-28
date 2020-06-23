@@ -6,11 +6,13 @@ var checkOut = modal.querySelector("[name=check-out]");
 var sumAdults = modal.querySelector("[name=adults]");
 var sumChilds = modal.querySelector("[name=childs]");
 
-modal.classList.add('modal-hide');
+form.classList.add('modal-hide');
+
 togBtn.addEventListener("click", function() {
-  modal.classList.toggle("modal-hide");
-  modal.classList.remove("modal-error");
+  form.classList.toggle("modal-hide");
+  form.classList.remove("modal-error");
 });
+
 
 form.addEventListener("submit", function(evt) {
   if(!checkIn.value || !checkOut.value || !sumAdults.value || !sumChilds.value) {
