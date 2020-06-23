@@ -1,10 +1,16 @@
 var togBtn = document.querySelector(".search-hotel-button");
-var modal = document.querySelector(".hotel-search");
+var modal = document.querySelector(".modal-container");
 var form = modal.querySelector("form");
 var checkIn = modal.querySelector("[name=check-in]");
 var checkOut = modal.querySelector("[name=check-out]");
 var sumAdults = modal.querySelector("[name=adults]");
 var sumChilds = modal.querySelector("[name=childs]");
+
+modal.classList.add('modal-hide');
+togBtn.addEventListener("click", function() {
+  modal.classList.toggle("modal-hide");
+  modal.classList.remove("modal-error");
+});
 
 form.addEventListener("submit", function(evt) {
   if(!checkIn.value || !checkOut.value || !sumAdults.value || !sumChilds.value) {
@@ -20,11 +26,11 @@ form.addEventListener("submit", function(evt) {
   }
 });
 
-togBtn.addEventListener("click", function(evt) {
+/*togBtn.addEventListener("click", function(evt) {
   evt.preventDefault();
   modal.classList.add("modal-show");
     if (isStorageSupport) {
       sumAdults.value = localStorage.getItem("sumAdults");
       sumChilds.value = localStorage.getItem("sumChilds");      
     }
-  });
+  });*/

@@ -4,6 +4,7 @@
   --basic-gray1: #333333;
   --basic-gray2: #F2F2F2;
   --basic-gray3: #231F20;
+  --basic-gray4: #ababab;
   --basic-blue: #2F80ED;
   --basic-white: #ffffff;
   --basic-black: #000000;
@@ -119,7 +120,7 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.site-navigation.current a:not[href] {
+.site-navigation a:not[href] {
   background-color: var(--basic-gray2);
 }
 
@@ -159,7 +160,7 @@ input[type="radio"].visually-hidden {
   text-align: right;
 }
 
-.site-navigation a:hover {
+.site-navigation a:not(.current-active):hover {
   color: var(--special2);
   background-color: transparent;
 }
@@ -271,8 +272,7 @@ a.current-active {
 }
 
 .info p:last-child {
-  padding: 10px 0 54px;
-  
+  padding: 10px 0 40px;
 }
 
 .info p {
@@ -281,19 +281,22 @@ a.current-active {
 
 .opportunities {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .info,
 .attractions div {
   background-color: var(--special2);
-  color: var(--basic-white);
+  color: var(--basic-black);
   width: 534px;
-  max-height: 256px;
+  min-height: auto;
   padding: 0 42px 0 45px;
 }
 
 .benefits {
   display: flex;
+  flex-wrap: wrap;
   justify-content: start;
   align-items: flex-start;
   min-height: 330px;
@@ -308,16 +311,18 @@ a.current-active {
 }
 
 .nested-list {
+  display: block;
+  box-sizing: border-box;
   width: 400px;
   height: auto;
   margin-top: 10px;
-  padding-top:  15px;
-  
+  padding:  15px 45px 10px;
 }
 
 .nested-list span {
   font-weight: normal;
-  padding: 0;
+  padding: 0 10px;
+  text-align: center;
 }
 .sub-title {
   font-size: 21px;
@@ -346,7 +351,7 @@ h3.home {
 
 .food::before {
   background-image: url("../img/icon-3.svg");
-  background-position: 162px 1px;
+  
 }
 
 h3.food {
@@ -435,7 +440,7 @@ h3.souvenir {
 .filtration {
   background-image: url(../img/background-catalog.jpg);
   background-position: center;
-  background-size: auto;
+  background-size: 1200px 100%;
   background-origin: content-box;
   background-repeat: no-repeat;
   background-color: var(--special13);
@@ -630,7 +635,7 @@ h3.souvenir {
   width: 4px;
   height: 4px;
 
-  background: #ababab;
+  background: var(--basic-gray4);
   border: 8px solid var(--basic-white);
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(171, 171, 171, 0.3);
@@ -761,21 +766,23 @@ padding-right: 70px;
 }
 
 .sort-button-container path,
-.sort-button-container a[href]:active path {
+.sort-up[href]:active path,
+.sort-down[href]:active path {
   fill: var(--special2);
 }
 
-.sort-button-container a[href] path {
-  fill: #231F20;
+.sort-up[href] path,
+.sort-down[href] path {
+  fill: var(--basic-gray3);
   opacity: 0.3;
 }
 
-.sort-button-container a:hover path,
-.sort-button-container a:focus path{
+.sort-up:hover path,
+.sort-up:focus path{
   opacity: 1;
 }
 
-.sort-button-container a[href].active path {
+.sort-down[href].active path {
   fill: var(--special2);
   opacity: 1;
 }
@@ -844,6 +851,7 @@ p.hotel-search-info {
 /*Button*/
 
 .search-hotel-button {
+  display: inline-block;
   font: inherit;
   text-align: center;
   font-style: normal;
@@ -964,7 +972,7 @@ p.hotel-search-info {
 
 .form-button {
   position: absolute;
-  top: 3px;
+  top: 1px;
   right: 1px;
   
   width: 40px;
@@ -976,6 +984,7 @@ p.hotel-search-info {
 
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
 .calendar svg {
@@ -1029,6 +1038,7 @@ p.visitors {
 }
 
 .hotel-search-form .button-search {
+  display: inline-block
   box-sizing: border-box;
 
   width: 458px;
@@ -1038,7 +1048,7 @@ p.visitors {
   margin-bottom: 55px; 
   padding: 16px;
 
-  background-color: #81b3d2;
+  background-color: var(--special2);
 }
 
 .sedona-map {
@@ -1075,6 +1085,7 @@ body .catalog-page {
 
 .catalog {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-top: 1px solid var(--special11);
   padding: 27px 73px 16px 72px;
@@ -1102,6 +1113,8 @@ a.link.active {
 }
 
 .hotel-photo-gallery h3{
+  display: inline-block;
+  max-width: 600px;
   margin: 0;
   
   font-size: 21px;
@@ -1169,8 +1182,6 @@ a.link.active {
 
 .more-details:active {
   background-color: var(--special7);
-  mix-blend-mode: normal;
-  opacity: 0.3;
 }
 
 .booking:hover {
@@ -1179,8 +1190,6 @@ a.link.active {
 
 .booking:active {
   background-color: var(--special4);
-  mix-blend-mode: normal;
-  opacity: 0.3;
 }
 
 booking-details {
@@ -1208,9 +1217,9 @@ booking-details {
   font-size: 14px;
   line-height: 27px;
   font-weight: normal;
-  color: #666666;
+  color: var(--special10);
 
-  background-color: #f2f2f2;
+  background-color: var(--basic-gray2);
 }
 
 p.user-rating {
@@ -1452,13 +1461,6 @@ p.user-rating {
   display: none;
 }
 
-.modal-close {
-  -webkit-animation: close 0.5s;
-          animation: close 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
 .modal-container {
   display: block;
   animation-name: bounce;
@@ -1508,7 +1510,7 @@ p.user-rating {
   border: none;
 }
 
-.map-frame {
+.frame-border {
   border: none;
   overflow: hidden;
   margin: 0;
